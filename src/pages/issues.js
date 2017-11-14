@@ -5,7 +5,7 @@ import Search from '../components/Search/Search';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Results from '../components/Results/Results';
 import PrivateInstantSearch from '../components/PrivateInstantSearch/PrivateInstantSearch';
-import { getCredentials } from '../logic/getCredentials';
+import { getCredentials } from '../helpers/getCredentials';
 
 const Login = ({ onAuthenticate }) => (
   <Grid>
