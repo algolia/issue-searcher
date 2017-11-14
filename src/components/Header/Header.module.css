@@ -7,8 +7,10 @@
 }
 
 .nav {
+  margin: auto;
   display: flex;
   align-items: center;
+  max-width: 70rem;
   font-size: 0.9rem;
 }
 

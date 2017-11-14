@@ -1,7 +1,54 @@
+@import './variables';
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Source Sans Pro', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+.textBlock {
+  margin: 3rem auto;
+  max-width: 40rem;
+
+  & h1 {
+    text-align: center;
+
+    &::after {
+      margin: 1.5em auto;
+      content: '';
+      display: block;
+      width: 30%;
+      max-width: 8rem;
+      height: 1px;
+      background-color: color(var(--primary-color) lightness(80%));
+    }
+  }
+
+  & p,
+  & ol {
+    font-size: 1.1rem;
+  }
+
+  & li + li {
+    margin-top: 0.5em;
+  }
+
+  & pre,
+  & code {
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+  }
+
+  & code {
+    display: inline-block;
+    padding: 0.2em;
+  }
+
+  & pre {
+    padding: 1em;
+  }
 }
