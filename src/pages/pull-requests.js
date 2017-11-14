@@ -5,7 +5,7 @@ import Search from '../components/Search/Search'
 import Sidebar from '../components/Sidebar/Sidebar'
 import Results from '../components/Results/Results'
 
-const IndexPage = () => (
+const PullRequestsPage = () => (
   <Grid>
     <Search />
     <Sidebar />
@@ -13,4 +13,4 @@ const IndexPage = () => (
   </Grid>
 )
 
-export default IndexPage
+export default PullRequestsPage

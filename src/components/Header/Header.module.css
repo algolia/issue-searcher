@@ -1,21 +1,26 @@
 @import '../../styles/variables';
 
 .root {
-  padding: 2rem;
+  padding: 1.5rem;
   color: #fff;
   background-color: var(--primary-color);
-  display: flex;
-  justify-content: space-between;
 }
 
-.home {
-  color: #fff;
-  text-decoration: none;
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.navLogo {
+  flex-grow: 1;
 }
 
 .navLink {
   color: #fff;
+  font-size: .9rem;
+  letter-spacing: .05em;
   text-decoration: none;
+  text-transform: uppercase;
 
   & + .navLink {
     margin-left: 1rem;
