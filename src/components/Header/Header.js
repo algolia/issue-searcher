@@ -6,11 +6,11 @@ const Header = () => (
   <header className={styles.root}>
     <a className={styles.home} href="/">issue-searcher</a>
     <nav className={styles.nav}>
-      <Link className={styles.navLink} to="/page-2/">Issues</Link>
-      <Link className={styles.navLink} to="/page-2/">Pull requests</Link>
+      <Link className={styles.navLink} to="/issues/">Issues</Link>
+      <Link className={styles.navLink} to="/pull-requests/">Pull requests</Link>
       <span className={styles.navSeparator}>|</span>
-      <Link className={styles.navLink} to="/page-2/">Login</Link>
-      <Link className={styles.navLink} to="/page-2/">Settings</Link>
+      <Link className={styles.navLink} to="/login/">Login</Link>
+      <Link className={styles.navLink} to="/settings/">Settings</Link>
     </nav>
   </header>
 )
