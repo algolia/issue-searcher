@@ -4,8 +4,12 @@ import styles from './Sidebar.module.css';
 
 const Sidebar = () => (
   <div className={styles.root}>
-    <RefinementList attributeName="repository.full_name" withSearchBox />
-    <RefinementList attributeName="login" withSearchBox />
+    <div className={styles.widget}>
+      <RefinementList attributeName="repository.full_name" withSearchBox />
+    </div>
+    <div className={styles.widget}>
+      <RefinementList attributeName="login" withSearchBox />{' '}
+    </div>
   </div>
 );
 

@@ -1,0 +1,42 @@
+@import './variables';
+
+.ais-SearchBox__input {
+  padding: 0 0.2em;
+  height: 2rem;
+  border: 1px solid (var(--primary-color) lightness(20%));
+}
+
+.ais-SearchBox__submit,
+.ais-SearchBox__reset {
+  display: none;
+}
+
+.ais-RefinementList__items {
+  margin-top: 1rem;
+}
+
+.ais-RefinementList__item + .ais-RefinementList__item {
+  margin-top: 0.5em;
+}
+
+.ais-RefinementList__itemLabel {
+  margin-left: 0.5em;
+}
+
+.ais-Hits__root {
+  & article {
+    padding: 1.5rem;
+
+    & + article {
+      border-top: 1px solid color(var(--primary-color) lightness(80%));
+    }
+  }
+
+  & h1 {
+    margin: 0;
+  }
+
+  & a {
+    color: var(--link-color);
+  }
+}

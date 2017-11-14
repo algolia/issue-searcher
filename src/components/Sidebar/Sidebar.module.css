@@ -1,7 +1,6 @@
 @import '../../styles/variables';
 
 .root {
-  padding: 1.5rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -17,5 +16,13 @@
     grid-column: 1 / 5;
     /* autoprefixer: on */
     border-right: 1px solid color(var(--primary-color) lightness(80%));
+  }
+}
+
+.widget {
+  padding: 1.5rem;
+
+  & + .widget {
+    border-top: 1px solid color(var(--primary-color) lightness(80%));
   }
 }

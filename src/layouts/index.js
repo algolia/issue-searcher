@@ -6,6 +6,7 @@ import Header from '../components/Header/Header';
 
 import '../styles/normalize.css';
 import '../styles/global.css';
+import '../styles/instantsearch.css';
 
 const TemplateWrapper = ({ children }) => (
   <div>
@@ -22,7 +23,7 @@ const TemplateWrapper = ({ children }) => (
 );
 
 TemplateWrapper.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.func,
 };
 
 export default TemplateWrapper;

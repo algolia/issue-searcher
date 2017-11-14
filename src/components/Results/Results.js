@@ -10,12 +10,12 @@ const shortLink = ({ repository: { full_name }, number }) =>
 
 const Hit = ({ hit }) => (
   <article>
-    <h1>
+    <h2>
       <a href={fullLink(hit)} target="_blank">
         {shortLink(hit)}
       </a>{' '}
       <Highlight hit={hit} attributeName="title" tagName="mark" />
-    </h1>
+    </h2>
     <div>
       <Snippet hit={hit} attributeName="body" tagName="mark" />
     </div>
@@ -24,7 +24,6 @@ const Hit = ({ hit }) => (
       <summary>all</summary>
       <pre>{JSON.stringify(hit, null, '  ')}</pre>
     </details>
-    <hr />
   </article>
 );
 
