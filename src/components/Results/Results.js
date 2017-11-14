@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hits } from 'react-instantsearch/dom';
+import { Hits, Pagination } from 'react-instantsearch/dom';
 import styles from './Results.module.css';
 
 const Hit = ({ hit }) => (
@@ -12,6 +12,7 @@ const Hit = ({ hit }) => (
 const Results = () => (
   <div className={styles.root}>
     <Hits hitComponent={Hit} />
+    <Pagination />
   </div>
 );
 
