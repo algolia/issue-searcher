@@ -1,3 +1,7 @@
 .root {
-  
+  padding: 1.5rem;
+  /* autoprefixer: off */
+  grid-row: 2 / 3;
+  grid-column: 4 / 13;
+  background: red;
 }
