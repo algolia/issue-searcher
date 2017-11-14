@@ -11,13 +11,6 @@ import PrivateInstantSearch from '../components/PrivateInstantSearch/PrivateInst
 
 import { getCredentials } from '../helpers/getCredentials';
 
-// const Login = ({ onAuthenticate }) => (
-//   <Grid>
-//     hey, use this to log in first!
-//     <button onClick={onAuthenticate}>log in</button>
-//   </Grid>
-// );
-
 const IssuesPage = () => (
   <PrivateInstantSearch Login={Login} getCredentials={getCredentials}>
     <Configure attributesToSnippet={['body:20']} />
