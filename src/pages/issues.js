@@ -13,7 +13,22 @@ import { getCredentials } from '../helpers/getCredentials';
 
 const IssuesPage = () => (
   <PrivateInstantSearch Login={Login} getCredentials={getCredentials}>
-    <Configure attributesToSnippet={['body:20']} />
+    <Configure
+      attributesToSnippet={['body:20']}
+      attributesToHighlight={['title']}
+      attributesToRetrieve={[
+        'number',
+        'state',
+        'login',
+        'labels',
+        'assignees',
+        'comments_count',
+        'created_at',
+        'refreshed_at',
+        'repository',
+        'open',
+      ]}
+    />
     <Grid>
       <Search />
       <Sidebar />
