@@ -9,7 +9,7 @@
 .nav {
   display: flex;
   align-items: center;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .navLogo {
@@ -18,7 +18,7 @@
 
 .navLink {
   color: #fff;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -29,7 +29,7 @@
 
 .navSeparator {
   position: relative;
-  top: -.1em;
+  top: -0.1em;
   margin-right: 1rem;
   margin-left: 1rem;
 }

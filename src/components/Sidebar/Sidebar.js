@@ -1,9 +1,6 @@
-import React from 'react'
-import styles from './Sidebar.module.css'
+import React from 'react';
+import styles from './Sidebar.module.css';
 
-const Sidebar = () => (
-  <div className={styles.root}>
-  </div>
-)
+const Sidebar = () => <div className={styles.root} />;
 
-export default Sidebar
+export default Sidebar;
