@@ -11,7 +11,10 @@ export const getCredentials = async () => {
   algoliaClient.setExtraHeader('x-algolia-tagfilters', `user_${uid}`);
 
   return {
-    algoliaClient,
-    indexName: 'issues_production',
+    type: 'LOGIN',
+    credentials: {
+      algoliaClient,
+      indexName: 'issues_production',
+    },
   };
 };

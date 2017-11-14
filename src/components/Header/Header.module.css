@@ -27,6 +27,14 @@
   }
 }
 
+.navButton {
+  background: none;
+  border: none;
+  appearance: none;
+  font: inherit;
+  cursor: pointer;
+}
+
 .navSeparator {
   position: relative;
   top: -0.1em;

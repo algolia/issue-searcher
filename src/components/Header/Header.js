@@ -1,8 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Link from 'gatsby-link';
+
 import styles from './Header.module.css';
 
-const Header = () => (
+import { getCredentials } from '../../helpers/getCredentials';
+
+const Header = ({ authenticated, dispatch }) => (
   <header className={styles.root}>
     <nav className={styles.nav}>
       <div className={styles.navLogo}>
@@ -23,9 +27,21 @@ const Header = () => (
           Pull requests
         </Link>
         <span className={styles.navSeparator}>|</span>
-        <Link className={styles.navLink} to="/login/">
-          Login
-        </Link>
+        {authenticated ? (
+          <button
+            className={[styles.navButton, styles.navLink].join(' ')}
+            onClick={() => dispatch({ type: 'LOGOUT' })}
+          >
+            log out
+          </button>
+        ) : (
+          <button
+            className={[styles.navButton, styles.navLink].join(' ')}
+            onClick={() => getCredentials().then(dispatch)}
+          >
+            log in
+          </button>
+        )}
         <Link className={styles.navLink} to="/settings/">
           Settings
         </Link>
@@ -34,4 +50,12 @@ const Header = () => (
   </header>
 );
 
-export default Header;
+const mapStateToProps = ({ authenticated }, ...ownProps) => ({
+  ...ownProps,
+  authenticated,
+});
+const mapDispatchToProps = (dispatch, ...ownProps) => ({
+  ...ownProps,
+  dispatch,
+});
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
