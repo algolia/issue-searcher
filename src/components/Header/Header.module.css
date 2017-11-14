@@ -1,0 +1,28 @@
+@import '../../styles/variables';
+
+.root {
+  padding: 2rem;
+  color: #fff;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.home {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+
+  & + .navLink {
+    margin-left: 1rem;
+  }
+}
+
+.navSeparator {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
