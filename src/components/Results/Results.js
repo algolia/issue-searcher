@@ -1,12 +1,31 @@
 import React from 'react';
-import { Hits, Pagination } from 'react-instantsearch/dom';
+import { Hits, Pagination, Highlight, Snippet } from 'react-instantsearch/dom';
 import styles from './Results.module.css';
 
+const fullLink = ({ repository: { full_name }, number }) =>
+  `https://github.com/${full_name}/issues/${number}`;
+
+const shortLink = ({ repository: { full_name }, number }) =>
+  `${full_name}#${number}`;
+
 const Hit = ({ hit }) => (
-  <div>
-    <pre>{JSON.stringify(hit, null, '  ')}</pre>
+  <article>
+    <h1>
+      <a href={fullLink(hit)} target="_blank">
+        {shortLink(hit)}
+      </a>{' '}
+      <Highlight hit={hit} attributeName="title" tagName="mark" />
+    </h1>
+    <div>
+      <Snippet hit={hit} attributeName="body" tagName="mark" />
+    </div>
+    <span>{hit.state}</span>
+    <details>
+      <summary>all</summary>
+      <pre>{JSON.stringify(hit, null, '  ')}</pre>
+    </details>
     <hr />
-  </div>
+  </article>
 );
 
 const Results = () => (

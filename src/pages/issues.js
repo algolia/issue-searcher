@@ -1,10 +1,13 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import { Configure } from 'react-instantsearch/dom';
+
 import Grid from '../components/Grid/Grid';
 import Search from '../components/Search/Search';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Results from '../components/Results/Results';
 import PrivateInstantSearch from '../components/PrivateInstantSearch/PrivateInstantSearch';
+
 import { getCredentials } from '../helpers/getCredentials';
 
 const Login = ({ onAuthenticate }) => (
@@ -16,6 +19,7 @@ const Login = ({ onAuthenticate }) => (
 
 const IssuesPage = () => (
   <PrivateInstantSearch Login={Login} getCredentials={getCredentials}>
+    <Configure attributesToSnippet={['body:20']} />
     <Grid>
       <Search />
       <Sidebar />
