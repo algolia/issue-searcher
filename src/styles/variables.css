@@ -1,3 +1,7 @@
 :root {
   --primary-color: #333;
 }
+
+@custom-media --small (width > 48em);
+@custom-media --medium (width > 80em);
+@custom-media --large (width > 90em);

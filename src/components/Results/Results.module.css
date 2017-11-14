@@ -1,8 +1,16 @@
+@import '../../styles/variables';
+
 .root {
   padding: 1.5rem;
   /* autoprefixer: off */
   grid-row: 2 / 3;
-  grid-column: 4 / 13;
+  grid-column: 1 / 13;
   /* autoprefixer: on */
-  background: red;
+
+  @media (--small) {
+    /* autoprefixer: off */
+    grid-row: 2 / 3;
+    grid-column: 5 / 13;
+    /* autoprefixer: on */
+  }
 }

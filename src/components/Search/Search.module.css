@@ -1,8 +1,10 @@
+@import '../../styles/variables';
+
 .root {
   padding: 1.5rem;
   /* autoprefixer: off */
   grid-row: 1 / 2;
   grid-column: 1 / 13;
   /* autoprefixer: on */
-  background: blue;
+  border-bottom: 1px solid color(var(--primary-color) lightness(80%));
 }

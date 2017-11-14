@@ -1,8 +1,21 @@
+@import '../../styles/variables';
+
 .root {
   padding: 1.5rem;
-  /* autoprefixer: off */
-  grid-row: 2 / 3;
-  grid-column: 1 / 4;
-  /* autoprefixer: on */
-  background: green;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: none;
+
+  @media (--small) {
+    display: block;
+    position: static;
+    /* autoprefixer: off */
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+    /* autoprefixer: on */
+    border-right: 1px solid color(var(--primary-color) lightness(80%));
+  }
 }
