@@ -5,6 +5,7 @@
 }
 
 body {
+  color: #333;
   font-family: 'Source Sans Pro', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
@@ -50,5 +51,9 @@ body {
 
   & pre {
     padding: 1em;
+  }
+
+  & a {
+    color: var(--link-color);
   }
 }

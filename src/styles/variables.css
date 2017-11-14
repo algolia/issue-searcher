@@ -1,5 +1,6 @@
 :root {
   --primary-color: #333;
+  --link-color: rgb(0, 174, 255);
 }
 
 @custom-media --small (width > 48em);
