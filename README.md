@@ -10,8 +10,8 @@ This project was created during the Q4 Algolia InstantSearch offsite
 And enter that info in `.env.development`:
 
 ```
-FALLBACK_UID=<your_uid>
-FALLBACK_API_KEY=<your_api_key>
+GATSBY_FALLBACK_UID=<your_uid>
+GATSBY_FALLBACK_API_KEY=<your_api_key>
 ```
 Run the site with `yarn develop`.
 

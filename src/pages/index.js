@@ -5,8 +5,8 @@ import Search from '../components/Search/Search';
 import Sidebar from '../components/Sidebar/Sidebar';
 import Results from '../components/Results/Results';
 
-const dotenv = `FALLBACK_UID=<your_uid>
-FALLBACK_API_KEY=<your_api_key>
+const dotenv = `GATSBY_FALLBACK_UID=<your_uid>
+GATSBY_FALLBACK_API_KEY=<your_api_key>
 `;
 
 const privateLink = `github.algolia.com/private?${new Date().getTime()}`;
