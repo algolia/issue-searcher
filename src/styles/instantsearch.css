@@ -77,5 +77,5 @@
 }
 
 .ais-Pagination__itemSelected {
-  background-color: color(var(--primary-color) lightness(80%));
+  background-color: color(var(--primary-color) lightness(85%));
 }
