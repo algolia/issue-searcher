@@ -1,5 +1,11 @@
 import React from 'react';
-import { Hits, Pagination, Highlight, Snippet } from 'react-instantsearch/dom';
+import {
+  Hits,
+  Pagination,
+  Highlight,
+  Snippet,
+  Stats,
+} from 'react-instantsearch/dom';
 import styles from './Results.module.css';
 
 const fullLink = ({ repository: { full_name }, number }) =>
@@ -29,6 +35,9 @@ const Hit = ({ hit }) => (
 
 const Results = () => (
   <div className={styles.root}>
+    <div style={{ margin: '1em' }}>
+      <Stats />
+    </div>
     <Hits hitComponent={Hit} />
     <Pagination />
   </div>
