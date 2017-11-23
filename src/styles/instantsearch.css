@@ -32,11 +32,50 @@
     }
   }
 
-  & h1 {
-    margin: 0;
+  & h2 {
+    margin-top: 0;
   }
 
   & a {
     color: var(--link-color);
   }
+}
+
+.ais-Pagination__root {
+  margin: 0;
+  padding: 1.5rem 0;
+  list-style: none;
+  text-align: center;
+  border-top: 1px solid color(var(--primary-color) lightness(80%));
+
+  & li:first-child {
+    border-radius: 5px 0 0 5px;
+  }
+
+  & li:last-child {
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.ais-Pagination__item {
+  display: inline-block;
+  border: 1px solid color(var(--primary-color) lightness(80%));
+
+  & + .ais-Pagination__item {
+    border-left: none;
+  }
+
+  & a {
+    color: var(--link-color);
+  }
+}
+
+.ais-Pagination__itemLink {
+  padding: 0.3rem 0.5rem;
+  display: block;
+  text-decoration: none;
+}
+
+.ais-Pagination__itemSelected {
+  background-color: color(var(--primary-color) lightness(80%));
 }
